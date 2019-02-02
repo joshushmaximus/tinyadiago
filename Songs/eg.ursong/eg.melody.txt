@@ -1,0 +1,8 @@
+BPM120
+Piano
+g a b c
+d e f g
+g a b c
+d e f g
+g a b c
+d e f g

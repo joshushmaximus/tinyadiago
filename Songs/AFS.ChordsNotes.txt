@@ -1,0 +1,67 @@
+
+CHORD SEQUENCE (see below for notes)
+
+Bf
+Fm
+G
+Af
+Bf
+Ef
+Gm
+Af
+Fm
+F
+Ef
+F
+Fm
+Bf
+F
+Bf
+Cm
+G
+Bf
+E
+Af
+G
+Af
+Bf
+F
+G
+Af
+Bf
+F
+Fm
+G
+Af
+Bf
+Fm
+G
+Af
+Bf
+F
+Fm
+G
+
+CHORD NOTES
+
+A	A+Cs+E
+Am	A+C+E
+Af	Af+C+Ef
+B	B+Ds+Fs
+Bm	B+D+Fs
+Bf	Bf+D+F
+C	C+E+G
+Cm	C+Ef+G
+Cf	Cf+Ef+Gf
+D	D+Fs+A
+Dm	D+F+A
+Df	Df+F+Af
+E	E+Gs+B
+Em	E+G+B
+Ef	Ef+G+Bf
+F	F+A+C
+Fm	F+af+C
+Ff	Ff+Af+Cf
+G	G+B+D
+Gm	G+Bf+D
+Gf	Gf+Bf+Df

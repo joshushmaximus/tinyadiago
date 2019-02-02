@@ -1,0 +1,33 @@
+NOTES
+Add BPM
+Change default BPM to 120
+Change default timing to 4:4
+Calculate note duraton = 60,000/BPM = qtr-note duration in ms
+
+[.][0-9][0-9]? -> fractional notes
+[Ww] -> whole
+[Hh] ->half
+[Qq] -> qtr
+[S] -> 16th
+r[w|h|q|s] -> rests
+[.] quarter rest
+
+x[0-9][0-9]? repeat previous token x times
+
+
+
+RESEARCH
+
+"depends on the speed of the song. if it's at 60 bpm, the quarter note will be exactly one second, the whole note at 4 seconds. at 120 bpm, the quarter note will be ate exactly 1/2 second, the whole note at 2 seconds."
+
+https://answers.yahoo.com/question/index?qid=20060710070901AAggU48
+
+"Techno 120-160 BPM (Generally around 120-135)
+Adagio is 66-76 BPM
+Allegro is 120-168 BPM"
+
+https://music.stackexchange.com/questions/4525/list-of-average-genre-tempo-bpm-levels
+
+"They found that from the 1940s until our current decade, the average tempo of our most popular songs fluctuated no more than 5 bpm, hovering between 117 bpm to 122 bpm."
+
+https://www.sonicscoop.com/2014/06/19/the-resonant-human-the-science-of-how-tempo-affects-us/

@@ -1,0 +1,9 @@
+bpm140
+piano
+g b g b b
+b,,b
+d d d d c
+c,,,
+b,,b
+bbbb
+a

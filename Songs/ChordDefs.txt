@@ -1,0 +1,26 @@
+A	a+cs+e
+Am	a+c+e
+Af	af+c+ef
+B	b+ds+fs
+Bm	b+d+fs
+Bf	bf+d+f
+C	c+e+g
+Cm	c+ef+g
+Cf	c+e+gf
+D	d+fs+a
+Dm	d+f+a
+Df	df+f+af
+E	d+gs+b
+Em	e+g+b
+Ef	ef+g+bf
+F	f+a+c
+Fm	f+af+c
+Ff	ff+af+cf
+G	g+b+d
+Gm	g+bf+d
+Gf	gf+bf+df
+
+
+
+
+

@@ -1,0 +1,1461 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pracplay.Prac.SDK</name>
+    </assembly>
+    <members>
+        <member name="M:Prac.SDK.TradeResults.Clear">
+            <summary>
+            clears results
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.ResetFiles">
+            <summary>
+            rediscover files in a path
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.remresult(System.String)">
+            <summary>
+            remove a result from list of results 
+            (if result was loaded from file, does not delete file).
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.isUniqueName(System.String)">
+            <summary>
+            determine if a result's name is unique (adding a result requires a unique name)
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.NewResultTrades(System.String,System.Collections.Generic.List{Prac.API.Trade})">
+            <summary>
+            add a result from list of trades
+            </summary>
+            <param name="name"></param>
+            <param name="trades"></param>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.NewResultFile(System.String)">
+            <summary>
+            add a result from a file
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.DisplayResults(System.String)">
+            <summary>
+            change selected index
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="F:Prac.SDK.TradeResults.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.TradeResults.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.TradeResults.Path">
+            <summary>
+            change path where new files are watched
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.TradeResults.AutoWatch">
+            <summary>
+            determines whether TradeResults will automatically add/remove result
+            files that show up in 'Path'
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.Reset">
+            <summary>
+            clears and resets the grid settings
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightadddump2clipboard">
+            <summary>
+            adds option to dump serialized models to right click menu
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightexportselobject(System.String)">
+            <summary>
+            dumps a serialized version of selected objects to clipboard
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightselectedsymclip(System.String)">
+            <summary>
+            copies symbol column values of all selected models to clipboard
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsymclipall">
+            <summary>
+            adds right click option to copy allsymbols to clipboard
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsymclipsel">
+            <summary>
+            adds right click option to copy selected ymbols to clipboard
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.openprogram(System.String[],System.String,System.Boolean)">
+            <summary>
+            opens a program and passes a list of symbols as an argument
+            </summary>
+            <param name="symbols"></param>
+            <param name="program"></param>
+            <param name="allsymsinoneshot">whether one instance of program can handle all symbols</param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightadddebugtogrequest">
+            <summary>
+            add right click option to request hiding/showing of debug window
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.toggledebugrequest(System.String)">
+            <summary>
+            request hidding showing of debug window
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddclip(System.String)">
+            <summary>
+            adds models for any symbols in clipboard to the view
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsym_user">
+            <summary>
+            adds right click option to prompt users for symbols
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsym_user_raw">
+            <summary>
+            adds right click option that prompts user for symbols and disables parsing of those symbols
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsym_clip">
+            <summary>
+            adds right click option to add symbols from clipboard
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsym_user(System.String)">
+            <summary>
+            prompts user for symbols to create models for
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsym_user_raw(System.String)">
+            <summary>
+            require that symbol entered are treated in raw form
+            </summary>
+            <param name="clicktext"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getmodels">
+            <summary>
+            override this method to supply models to the grid, whenever symbols are added 
+            (symbols added via addsymsnow)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.addsymsnow">
+            <summary>
+            called by most of the symbol/model adding methods
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.addsymsnow_post">
+            <summary>
+            called when adding symbols, after models have been created and added to view
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.addsymbols(System.String[])">
+            <summary>
+            start a thread to add models for symbols to view
+            </summary>
+            <param name="symbols"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightallsymclip(System.String)">
+            <summary>
+            copies all model symbols to clipboard
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.righttogcache(System.String)">
+            <summary>
+            toggles caching flag (not used by default)
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.selectall">
+            <summary>
+            whether all objects have been selected by user
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.dv_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            implements default select all behavior
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getgooglefinanceurl">
+            <summary>
+            gets google finance base url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getgooglesearchurl">
+            <summary>
+            gets general search url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getyahoofinanceurl">
+            <summary>
+            gets yahoo finance base url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getseekingalphaurl">
+            <summary>
+            gets seeking alpha base url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.openbrowserurls(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            opens browser sessions for a list of queries (queries = symbols, company names, etc)
+            </summary>
+            <param name="urlappendquery"></param>
+            <param name="baseurl"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddgooglesym">
+            <summary>
+            adds right click option to google finance selected symbols
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddyahoosym">
+            <summary>
+            adds right click menu to lookup symbol in yahoo finance
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightgoogleselected(System.String)">
+            <summary>
+            opens symbols in google finance
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightyahooselected(System.String)">
+            <summary>
+            opens symbols in yahoo finance
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsep">
+            <summary>
+            adds seperate to right click menu
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightadd">
+            <summary>
+            reset current menu level
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightadd(System.String)">
+            <summary>
+            add a menu level
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightadd(System.String,Prac.API.DebugDelegate)">
+            <summary>
+            add a clickable item under most recent menu level
+            </summary>
+            <param name="name"></param>
+            <param name="viewclick"></param>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.DefaultTicketSize">
+            <summary>
+            default order size for an order ticket
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.CreateRightClick">
+            <summary>
+            default right click menu
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.ToItems(`0)">
+            <summary>
+            convert a model to an exportable format
+            </summary>
+            <param name="it"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.parsesymbols(System.String)">
+            <summary>
+            grab symbols from text
+            </summary>
+            <param name="symtext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.parsesymbols(System.String,System.Boolean)">
+            <summary>
+            grab symols from text, control whether lowercase is allowed
+            </summary>
+            <param name="symtext"></param>
+            <param name="toupper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getsymbols_popup">
+            <summary>
+            get a popup prompting user for symbols
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getsymbols_popup(System.Boolean,System.Boolean)">
+            <summary>
+            get a popup prompting user for symbols, control whether lowercase allowed
+            </summary>
+            <param name="toupper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.openchart(System.String)">
+            <summary>
+            open a chart for a symbol
+            </summary>
+            <param name="sym"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.openchart(System.Collections.Generic.List{System.String})">
+            <summary>
+            open chart for many symbols
+            </summary>
+            <param name="syms"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddopenchart">
+            <summary>
+            add right click option to open chart for selected symbols
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.openchartselected(System.String)">
+            <summary>
+            opens chart for selected symbols
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getsymbolsclipboard">
+            <summary>
+            gets any symbols from clipboard
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.removesymbolheader(System.String[])">
+            <summary>
+            removes header row from symbols copied from clipboard
+            </summary>
+            <param name="syms"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.ToAllItems">
+            <summary>
+            dumps entire grid in an exportable format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightexport(System.String)">
+            <summary>
+            exports entire grid to a csv file
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddremovesel">
+            <summary>
+            adds right click option to remove selected models
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddremoveall">
+            <summary>
+            add right click option to remove all models
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightclear(System.String)">
+            <summary>
+            removes all models (w/confirmation)
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.Clear">
+            <summary>
+            clear view
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddviewsall">
+            <summary>
+            add right click for all views
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddviewsall(System.Boolean)">
+            <summary>
+            add right click for all views with prev/next control
+            </summary>
+            <param name="prevandnext"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightaddsym_file">
+            <summary>
+            adds right click option to add symbols from file
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightsymfile(System.String)">
+            <summary>
+            adds models from symbols found in a file
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.getsymbols_file">
+            <summary>
+            gets symbols from a file chosen by user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.rightremove(System.String)">
+            <summary>
+            removes selected symbols (w/user confirm)
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.debug(System.String)">
+            <summary>
+            send view debugging information
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.status(System.String)">
+            <summary>
+            send status info
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.selectallrows">
+            <summary>
+            select all models
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.selectallrows_clear">
+            <summary>
+            unselect all models
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.ToData(`0)">
+            <summary>
+            dump model as native/raw objects
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.modformatcols">
+            <summary>
+            holds formatting index (created by genericviewitem)
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.formats">
+            <summary>
+            holds formatting information (created by genericviewitem)
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.addmodels(System.Collections.Generic.List{`0})">
+            <summary>
+            add models
+            </summary>
+            <param name="gts"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.addmodel(`0)">
+            <summary>
+            adds models
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.addmodel(`0,System.Boolean)">
+            <summary>
+            adds models with screen refresh control
+            </summary>
+            <param name="mod"></param>
+            <param name="refresh"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.colfreeze_inc(System.String)">
+            <summary>
+            freezes more columsn
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.colfreeze_dec(System.String)">
+            <summary>
+            freezes fewer columns
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.ShowItems(`0)">
+            <summary>
+            show model
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.ShowItems(System.Collections.Generic.List{`0})">
+            <summary>
+            show models
+            </summary>
+            <param name="Noms"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.ShowItems(System.Collections.Generic.List{`0},System.Boolean)">
+            <summary>
+             show models with ability to clear previosu models
+            </summary>
+            <param name="Noms"></param>
+            <param name="clearcurrent"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.refreshnow">
+            <summary>
+            refresh view now (force)
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.refreshnow(System.Boolean)">
+            <summary>
+            refresh now with control
+            </summary>
+            <param name="continuebatch"></param>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.models">
+            <summary>
+            models used by view
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.genindex(System.Int32)">
+            <summary>
+            gets zero-based incremental index of given length
+            </summary>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.GenericView`1.initformat(System.Int32[],System.String[])">
+            <summary>
+            sets up view formatting
+            </summary>
+            <param name="modformats"></param>
+            <param name="formats"></param>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1._enablecolors">
+            <summary>
+            whether coloring is used for negative numbers and percentages
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.isSortAllowed">
+            <summary>
+            whether column sorting in the view is allowed
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericView`1.DefaultDecimalPlaces">
+            <summary>
+            decimal places to display
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.Owner">
+            <summary>
+            current user of this application
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.isOwnerValid">
+            <summary>
+            whether current user is valid
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.GenericView`1.SendDebugVisibleToggleEvent">
+            <summary>
+            listen to hide/show request sfor debug window
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.VerboseDebugging">
+            <summary>
+            whether extended debugging is heard
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.GenericView`1.SendOrderEvent">
+            <summary>
+            sends orders from view-originated tickets
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.ViewName">
+            <summary>
+            name of this view
+            (used when exporting models to files)
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.GenericView`1.SendDebugEvent">
+            <summary>
+            listen to view debugging information
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.Sleep">
+            <summary>
+            sleep (milliseconds) between option requests
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.ColFreeze">
+            <summary>
+            freeze or unfree columns
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.DecimalFormatDisplay">
+            <summary>
+            display decimals
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericView`1.DecimalFormatExport">
+            <summary>
+            export decimals
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.TickFileFilterControl">
+            <summary>
+            a GUI for building tick file filters easily.
+            useful for selecting a backtesting run.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.#ctor">
+            <summary>
+            creates a tick file filter control
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.#ctor(System.String)">
+            <summary>
+            creates a tick file filter control from a tickfolder path
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.#ctor(System.String[0:,0:])">
+            <summary>
+            creates tickfilefilter control from an index
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.GetFilter">
+            <summary>
+            gets currently selected filter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.SetSymbols(System.String)">
+            <summary>
+            sets available symbols found in a system path
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.SetSymbols(System.String[0:,0:])">
+            <summary>
+            sets available symbols from an index
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="F:Prac.SDK.TickFileFilterControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.TickFileFilterControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.TickFileFilterControl.SendDebug">
+            <summary>
+            sends debug messages from control
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.TickFileFilterControl.FilterUpdate">
+            <summary>
+            sent whenever user changes filter
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.TextPrompt.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TextPrompt.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.TextPrompt.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TextPrompt.Prompt(System.String,System.String)">
+            <summary>
+            prompt for a value
+            </summary>
+            <param name="caption"></param>
+            <param name="prompt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.TextPrompt.Prompt(System.String,System.String,System.String)">
+            <summary>
+            prompt for a value
+            </summary>
+            <param name="caption"></param>
+            <param name="prompt"></param>
+            <param name="defaultval"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Prac.SDK.DebugControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.DebugControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.DebugControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.DebugControl.UseExternalTimeStamp">
+            <summary>
+            toggle whether an external time stamp is used (timestamps must be enabled)
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.DebugControl.ExternalTimeStamp">
+            <summary>
+            set an external time stamp
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.Ticket">
+            <summary>
+            create a order ticket to prompt user for sending an order.
+            returns an order that can be easily sent with SendOrder fuctions.
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.Ticket.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Ticket.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.Ticket.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Ticket.#ctor(Prac.API.Order)">
+            <summary>
+            creates ticket with default order
+            </summary>
+            <param name="working"></param>
+        </member>
+        <member name="M:Prac.SDK.Ticket.newTick(Prac.API.Tick)">
+            <summary>
+            if new ticks are passed to this ticket, ticket will automatically update the price of limit and stops orders for opposing side.
+            </summary>
+            <param name="tick"></param>
+        </member>
+        <member name="M:Prac.SDK.Ticket.orderStatus(System.String,System.Int32)">
+            <summary>
+            called by external programs to report status of an order back to the ticket
+            </summary>
+            <param name="symbol"></param>
+            <param name="error"></param>
+        </member>
+        <member name="P:Prac.SDK.Ticket.WorkingOrder">
+            <summary>
+            gets the current value of the working order for the ticket
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.Ticket.SendOrder">
+            <summary>
+            called when the Send button is pressed.   Working Order is automatically sent to the handler of this event
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.DebugWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.DebugWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.DebugWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.DebugWindow.UseExternalTimeStamp">
+            <summary>
+            toggle whether an external time stamp is used (timestamps must be enabled)
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.DebugWindow.ExternalTimeStamp">
+            <summary>
+            set an external time stamp
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.ResponseList">
+            <summary>
+            lets users choose from responses in a dll
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ResponseList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ResponseList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.ResponseList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.GenericViewItem`1">
+            <summary>
+            used to simplify mapping models to views
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Prac.SDK.GenericViewItem`1.itemformats">
+            <summary>
+            formats for importing and exporting
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericViewItem`1.gridfmts">
+            <summary>
+            formats for display
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericViewItem`1.fieldnames">
+            <summary>
+            object field mapping
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericViewItem`1.itemnames">
+            <summary>
+            column/display name
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.GenericViewItem`1.itemtypes">
+            <summary>
+            type of the object field (autodetected)
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.Clear">
+            <summary>
+            clear all viewitem information
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.debug(System.String)">
+            <summary>
+            send debugging for view item
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.status(System.String)">
+            <summary>
+            send status info
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="F:Prac.SDK.GenericViewItem`1.VerboseDebugging">
+            <summary>
+            whether extended debugging is heard
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.v(System.String)">
+            <summary>
+            send extended debugging
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.AddFormat(System.String)">
+            <summary>
+            defaults to a numeric grid format (eg N2)
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.Add(System.String)">
+            <summary>
+            add column with field of same name and no formatting
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.Add(System.String,System.String)">
+            <summary>
+            add column with field of different name, and no formatting
+            </summary>
+            <param name="name"></param>
+            <param name="fieldname"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.Add(System.String,System.String,System.String)">
+            <summary>
+            specify grid formatting
+            </summary>
+            <param name="name"></param>
+            <param name="fieldname"></param>
+            <param name="gridformat"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.Add(System.String,System.String,System.String,System.String)">
+            <summary>
+            specify item (aka export) formatting
+            </summary>
+            <param name="name"></param>
+            <param name="fieldname"></param>
+            <param name="gridformat"></param>
+            <param name="itemfmt"></param>
+        </member>
+        <member name="M:Prac.SDK.GenericViewItem`1.Add(System.String,System.String,System.String,System.String,System.Type)">
+            <summary>
+            specify type explictly rather than autodetect
+            </summary>
+            <param name="name"></param>
+            <param name="fieldname"></param>
+            <param name="gridformat"></param>
+            <param name="itemfmt"></param>
+            <param name="t"></param>
+        </member>
+        <member name="P:Prac.SDK.GenericViewItem`1.DimNames">
+            <summary>
+            names of each dimension
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericViewItem`1.DimTypes">
+            <summary>
+            type of each dimension
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericViewItem`1.DimFormats">
+            <summary>
+            format of each dimension when displayed as string/exportable
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericViewItem`1.ItemType">
+            <summary>
+            type of this item
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.GenericViewItem`1.Count">
+            <summary>
+            count of items in this view definition
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.GenericViewItem`1.SendDebugEvent">
+            <summary>
+            listen to errors and debugs from this view item
+            </summary>
+        </member>
+        <member name="E:Prac.SDK.GenericViewItem`1.SendStatusEvent">
+            <summary>
+            listen to status events
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.ChartControl">
+            <summary>
+            A generic charting form that plots BarList objects
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.newTick(Prac.API.Tick)">
+            <summary>
+            create bars from ticks
+            </summary>
+            <param name="k"></param>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.newPoint(System.String,System.Decimal,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            create bars from points
+            </summary>
+            <param name="p"></param>
+            <param name="time"></param>
+            <param name="date"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.redraw">
+            <summary>
+            force a manual refresh of the chart
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.Reset">
+            <summary>
+            reset the chart and underlying data structures
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.#ctor(Prac.API.BarList,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prac.SDK.Chart"/> class.
+            </summary>
+            <param name="b">The barlist.</param>
+            <param name="allowtype">if set to <c>true</c> [allowtype] will allow typing/changing of new symbols on the chart window.</param>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.isYLabelsDisplayed">
+            <summary>
+            whether price labels are displayed
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.isYLinesDisplayed">
+            <summary>
+            whether horizontal price lines are drawn
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.isXLabelsDisplayed">
+            <summary>
+            whether x axis is labeled (with dates)
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.isAxesDisplayed">
+            <summary>
+            whether x and y axes are drawn
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.MinPrice">
+            <summary>
+            used to control smallest possible price allowed on chart
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.DrawChartLabel(System.Decimal,System.Int32,System.String,System.Drawing.Color)">
+            <summary>
+            draws text label on a chart.
+            if price is less than zero (MinPrice), all labels are cleared.
+            </summary>
+            <param name="price"></param>
+            <param name="bar"></param>
+            <param name="label"></param>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.IdentifyOscilatorColors(System.Drawing.Color[])">
+            <summary>
+            tell chart which colors represent oscilators, so no seperate call is needed
+            </summary>
+            <param name="osc_colors"></param>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.MaxOsc">
+            <summary>
+            maximum oscilator value
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl._minosc">
+            <summary>
+            minimum oscilator value
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.ChartControl.DrawOscLabel(System.Decimal,System.Int32,System.String,System.Drawing.Color)">
+            <summary>
+            draw an oscilator line/label
+            </summary>
+            <param name="osc"></param>
+            <param name="time"></param>
+            <param name="label"></param>
+            <param name="color"></param>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.OscHeightPct">
+            <summary>
+            percentage of the price window the oscilator can use (.25 = 25%, 0 = disable)
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.ChartControl.OscTransparency">
+            <summary>
+            amount of transparency for oscilator lines (1 = transparent, 0 = opaque)
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.ChartControl.AutoUpdate">
+            <summary>
+            if set, control will autorefresh with each tick.
+            otherwise, refresh must be called manually.
+            manual is recommended during rapid updates, as the chart may flash otherwise.
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.ChartControl.DisplayRightClick">
+            <summary>
+            controls whether right click menu can be selected
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.ChartControl.Title">
+            <summary>
+            Gets the title of this chart.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Prac.SDK.ChartControl.ManualColor">
+            <summary>
+            color used for manual chart drawings
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.PopupWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.PopupWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.PopupWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.Log">
+            <summary>
+            TradeLink logging to a file
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Log.#ctor(System.String)">
+            <summary>
+            create a log
+            </summary>
+            <param name="program"></param>
+        </member>
+        <member name="M:Prac.SDK.Log.#ctor(System.String,System.Boolean,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            create a log
+            </summary>
+            <param name="logname"></param>
+            <param name="dateinlogname"></param>
+            <param name="appendtolog"></param>
+            <param name="path"></param>
+            <param name="timestamps"></param>
+        </member>
+        <member name="M:Prac.SDK.Log.GotDebug(System.String)">
+            <summary>
+            log something
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Prac.SDK.Log.Stop">
+            <summary>
+            close the log
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.Log.Date">
+            <summary>
+            gets current date associated with log
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.Log.FullName">
+            <summary>
+            full path of log file
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.Log.Content">
+            <summary>
+            contents of log file
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.TradeResultsWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.TradeResultsWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.TradeResultsWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Prac.SDK.Chart.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Chart.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Prac.SDK.Chart.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Chart.#ctor(Prac.API.BarList,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prac.SDK.Chart"/> class.
+            </summary>
+            <param name="b">The barlist.</param>
+            <param name="allowtype">if set to <c>true</c> [allowtype] will allow typing/changing of new symbols on the chart window.</param>
+        </member>
+        <member name="T:Prac.SDK.BarListUpdated">
+            <summary>
+            Used to pass changes to barlists
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.AppTracker">
+            <summary>
+            record application custom application events, mouse-clicks, etc to a URL
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.AppTracker.Track(Prac.SDK.TrackType)">
+            <summary>
+            track an event
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Prac.SDK.AppTracker.Track(Prac.SDK.TrackType,System.String)">
+            <summary>
+            track an event with custom data
+            </summary>
+            <param name="type"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Prac.SDK.AppTracker.Track(Prac.SDK.TrackType,System.Decimal)">
+            <summary>
+            track a numeric event
+            </summary>
+            <param name="t"></param>
+            <param name="val"></param>
+        </member>
+        <member name="M:Prac.SDK.AppTracker.Score(System.Decimal)">
+            <summary>
+            track a score update
+            </summary>
+            <param name="points"></param>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.TrackUrl">
+            <summary>
+            url to post requests
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.Program">
+            <summary>
+            program to post as
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.AutoStartStop">
+            <summary>
+            send start and stop actions automatically at load and form close
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.TrackEnabled">
+            <summary>
+            enable or disable server tracking (debugging still tracked)
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.PushTracksOnClose">
+            <summary>
+            push any untracked events when form is closed
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.PushTracksCloseMax">
+            <summary>
+            maximum number of attempts to push tracks on close
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.InterTrackSleep">
+            <summary>
+            wait between tracks
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.UnprocessedItemCount">
+            <summary>
+            count of unprocessed items
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.TrackClicks">
+            <summary>
+            track mouse clicks as apptracker events
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.AppTracker.TrackCount">
+            <summary>
+            count of how many events/actions have been tracked in total for this session
+            </summary>
+        </member>
+        <member name="T:Prac.SDK.Results">
+            <summary>
+            track results
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Results.#ctor">
+            <summary>
+            create default results instance
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Results.#ctor(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            create results instance with risk free return, comission and report time
+            </summary>
+            <param name="rfr"></param>
+            <param name="com"></param>
+            <param name="reporttime">0 to disable reports, otherwise 16:46:00 = 164600</param>
+        </member>
+        <member name="M:Prac.SDK.Results.GotFill(Prac.API.Trade)">
+            <summary>
+            pass fills as they arrive
+            </summary>
+            <param name="fill"></param>
+        </member>
+        <member name="M:Prac.SDK.Results.GotPosition(Prac.API.Position)">
+            <summary>
+            pass new positions as they arrive
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:Prac.SDK.Results.GotDebug(System.String,System.Boolean)">
+            <summary>
+            pass debugs to results for report generation
+            </summary>
+            <param name="msg"></param>
+            <param name="appendtime"></param>
+        </member>
+        <member name="M:Prac.SDK.Results.GotDebug(System.String)">
+            <summary>
+            pass debug messages to results for report generation
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Prac.SDK.Results.newTick(Prac.API.Tick)">
+            <summary>
+            pass ticks as they arrive (only necessary if using report time)
+            </summary>
+            <param name="k"></param>
+        </member>
+        <member name="M:Prac.SDK.Results.Report">
+            <summary>
+            generate current report as report event
+            </summary>
+        </member>
+        <member name="M:Prac.SDK.Results.FetchResults(System.Collections.Generic.List{Prac.SDK.TradeResult},System.Decimal,System.Decimal,Prac.API.DebugDelegate)">
+            <summary>
+            get results from list of traderesults
+            </summary>
+            <param name="results"></param>
+            <param name="RiskFreeRate"></param>
+            <param name="CommissionPerContractShare"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.Results.ResultsFromTradeList(System.Collections.Generic.List{Prac.API.Trade},System.Decimal,System.Decimal,Prac.API.DebugDelegate)">
+            <summary>
+            get results from list of trades
+            </summary>
+            <param name="trades"></param>
+            <param name="riskfreerate"></param>
+            <param name="commissionpershare"></param>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.Results.ToString">
+            <summary>
+            get string version of results table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prac.SDK.Results.ToString(System.String)">
+            <summary>
+            get results like calc => value where '=>' is the delim
+            </summary>
+            <param name="delim"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Prac.SDK.Results.CheckLiveAfterTickCount">
+            <summary>
+            wait to do live test after X ticks have arrived
+            </summary>
+        </member>
+        <member name="P:Prac.SDK.Results.CheckLiveMaxDelaySec">
+            <summary>
+            if a tick is within this many seconds of current system time on same day, tick stream is considered live and reports can be sent
+            </summary>
+        </member>
+    </members>
+</doc>

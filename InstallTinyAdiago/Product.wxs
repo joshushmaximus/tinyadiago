@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="TinyAdiago" Language="1033" Version="1.0.0.0" Manufacturer="JDF" UpgradeCode="f26e0150-2ff6-4413-8404-9beabb556bac">
+		<Package InstallerVersion="200" Compressed="yes"  Platform="x64" />
+    <Media Id="1" Cabinet="TinyAdiago.cab" EmbedCab="yes" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		
+
+		<Feature Id="ProductFeature" Title="TinyAdiago" Level="1" Absent="allow" >
+      <ComponentRef Id="Component.TinyAdiago.exe" />
+      <ComponentRef Id="Component.Labamba.txt" />
+      <ComponentRef Id="Component.AFS.txt" />
+      <ComponentRef Id="Component.README.txt" />
+      <ComponentRef Id="Component._Start.cmd" />
+      <ComponentRef Id="Component.Start.cmd" />
+      <ComponentRef Id="Component.Sanford.Multimedia.Midi.dll" />
+      <ComponentRef Id="Component.Pracplay.Prac.Core.dll" />
+    <ComponentRef Id="Component.Pracplay.Prac.API.dll" />
+      <ComponentRef Id="Uninstall_TinyAdiago" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFiles64Folder">
+        <Directory Id="INSTALLFOLDER" Name="TinyAdiago">
+
+
+          <Component Id="Component.Sanford.Multimedia.Midi.dll" Guid="0c87194c-48c9-42ae-9174-cc4277ad19eb" Win64="yes">
+            <File Id="Sanford.Multimedia.Midi.dll" Source="..\..\..\bin\x64\Release\Sanford.Multimedia.Midi.dll" />
+          </Component>
+          
+          <Component Id="Component.Pracplay.Prac.API.dll" Guid="f301547e-274c-4540-9d09-e82c438b0e1e" Win64="yes">
+            <File Id="Pracplay.Prac.API.dll" Source="..\..\..\bin\x64\Release\Pracplay.Prac.API.dll" />
+          </Component>
+          
+          <Component Id="Component.Pracplay.Prac.Core.dll" Guid="e8fd7135-1a4a-4fc4-bbd0-0c61a0b8062f" Win64="yes">
+            <File Id="Pracplay.Prac.Core.dll" Source="..\..\..\bin\x64\Release\Pracplay.Prac.Core.dll" />
+          </Component>
+
+          <Component Id="Component.Labamba.txt" Guid="870c9230-7e9c-4499-881d-31f0c36ee75e" Win64="yes">
+            <File Id="Labamba.txt" Source="..\..\..\bin\x64\Release\Songs\Labamba.txt" />
+          </Component>
+
+          <Component Id="Component.AFS.txt" Guid="dca7d302-51aa-42be-96dc-c8a6284b4b90" Win64="yes">
+            <File Id="AFS.txt" Source="..\..\..\bin\x64\Release\Songs\AFS.txt" />
+          </Component>
+
+          <Component Id="Component.README.txt" Guid="18b477bc-f66c-4de0-af37-7157e1542146" Win64="yes">
+            <File Id="README.txt" Source="..\..\..\bin\x64\Release\README.txt" />
+          </Component>
+
+          <Component Id="Component.Start.cmd" Guid="7bbe8314-78c4-46a4-b8ea-8bc5543a70b4" Win64="yes">
+            <File Id="Start.cmd" Source="..\..\..\bin\x64\Release\BatchFiles\start.cmd" />
+          </Component>
+
+          <Component Id="Component._Start.cmd" Guid="308f5a9e-cc15-49ba-a14e-b55ec982f0b1" Win64="yes">
+            <File Id="_Start.cmd" Source="..\..\..\bin\x64\Release\BatchFiles\_start.cmd" />
+          </Component>
+
+          <Component Id="Component.TinyAdiago.exe" Guid="0c87194c-48c9-42ae-9174-cc4259b4dca5" Win64="yes">
+            <File Id="TinyAdiago.exe" Source="..\..\..\bin\x64\Release\TinyAdiago.exe" />
+          </Component>
+          
+          <Component Id="Uninstall_TinyAdiago" Guid="0c87194c-48c9-42ae-9174-cc426d5f4b8d" Win64="yes">
+            <Shortcut Id="INSTALLDIR.Uninstall_TinyAdiago" WorkingDirectory="System64Folder" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" Name="Uninstall TinyAdiago.lnk" />
+            <RemoveFolder Id="INSTALLDIR" On="uninstall" />
+
+            <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+              <RegistryValue Value="0" Type="string" KeyPath="yes" />
+            </RegistryKey>
+          </Component>
+          
+        </Directory>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+      <ComponentRef Id="Component.Start.cmd" />
+      <ComponentRef Id="Component._Start.cmd" />
+      <ComponentRef Id="Component.TinyAdiago.exe" />
+      <ComponentRef Id="Component.Labamba.txt" />
+      <ComponentRef Id="Component.AFS.txt" />
+      <ComponentRef Id="Component.README.txt" />
+      <ComponentRef Id="Component.Pracplay.Prac.Core.dll" />
+      <ComponentRef Id="Component.Pracplay.Prac.API.dll" />
+      <ComponentRef Id="Component.Sanford.Multimedia.Midi.dll" />
+      <ComponentRef Id="Uninstall_TinyAdiago" />
+    </ComponentGroup>
+	</Fragment>
+</Wix>
